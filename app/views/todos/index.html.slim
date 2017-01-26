@@ -3,5 +3,5 @@
  	  li = todo.item
 
 p = link_to "New", new_todo_path
-p = link_to "Edit", '#'
+p = link_to "Edit", edit_todo_path(@todo.id)
 p = link_to "Delete", '#'
