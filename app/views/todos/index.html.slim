@@ -1,7 +1,7 @@
 - @todos.each do |todo|
   ul
- 	  li = todo.item
-
+      li = todo.item
+      li = link_to "Edit", edit_todo_path(todo)
+      li = link_to "Delete", 'todo'
+      
 p = link_to "New", new_todo_path
-p = link_to "Edit", edit_todo_path(2)
-p = link_to "Delete", '#'

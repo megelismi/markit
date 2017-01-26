@@ -12,13 +12,6 @@ class TodosController < ApplicationController
 		redirect_to todos_path
 	end
 
-	private 
-
-	def todo_params
-		params.require(:todo).permit(:item)
-	end
-
-
 	def edit
 		@todo = Todo.find(params[:id])
 	end
@@ -31,6 +24,12 @@ class TodosController < ApplicationController
 	def destroy
   		@todo = Todo.find(params[:id])
   		@todo.destroy
+	end
+
+	private 
+
+	def todo_params
+		params.require(:todo).permit(:item)
 	end
 
 end
