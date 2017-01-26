@@ -23,10 +23,17 @@ class TodosController < ApplicationController
 		@todo = Todo.find(params[:id])
 	end
 
-	def update 
-		@todo = Todo.find(params[:id])
-		@todo.update
-	end
+  def update
+ 	respond_to do |format|
+   if @todo.update(todo_params)
+     format.html { redirect_to @todo, notice: 'Todo was successfully updated.' }
+     format.json { render :show, status: :ok, location: @todo }
+   else
+     format.html { render :edit }
+     format.json { render json: @todo.errors, status: :unprocessable_entity }
+   end
+ end
+end
 
 	def destroy
   		@todo = Todo.find(params[:id])
