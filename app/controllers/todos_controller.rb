@@ -4,11 +4,6 @@ class TodosController < ApplicationController
 	end
 
 	def show
-		@todo = Todo.new
-		respond_to do |format|
-	    	format.html
-	    	format.js
-	  	end
 	end 
 
 	def new 
@@ -22,6 +17,10 @@ class TodosController < ApplicationController
 
 	def edit
 		@todo = Todo.find(params[:id])
+		respond_to do |format|
+	    	format.html
+	    	format.js
+	  	end
 	end
 
 	def update 
@@ -38,14 +37,6 @@ class TodosController < ApplicationController
 
 	def new_modal 
 		@todo = Todo.new
-		respond_to do |format|
-	    	format.html
-	    	format.js
-	  	end
-	end
-
-	def edit_modal 
-		@todo = Todo.find(params[:id])
 		respond_to do |format|
 	    	format.html
 	    	format.js
