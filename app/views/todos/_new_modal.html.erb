@@ -3,8 +3,8 @@
    <h3 id="myModalLabel">New</h3>
 </div>
 <div class="modal-body">
-	<%= form_for @todo do |f| %>
-	  	<%= f.text_field :item, :placeholder => "Add new item" %><br />
-	  	<%= f.submit %>
+	<%= form_for @todo, :html => {:class => "form-horizontal center"} do |f| %>
+	  	<%= f.text_field :item, :placeholder => "Add new item", class: "input" %><br />
+	  	<%= f.submit "Add", class: "btn btn-default btn-primary custom-btn" %>
 	<% end %>
 </div>

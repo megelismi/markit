@@ -1,4 +1,5 @@
-<%= form_for(@todo) do |f| %>
-	<%= f.text_field :item %><br />
-	<%= f.submit %>
+
+<%= form_for @todo, :html => {:class => "form-horizontal center"} do |f| %>
+	<%= f.text_field :item, class: "input" %><br />
+	<%= f.submit "Edit",  class: "btn btn-default btn-primary custom-button" %>
 <% end %>
