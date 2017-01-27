@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-	get '/todos/modal', to: 'todos#modal', :as => :modal
+	get 'new/todos/modal', to: 'todos#new_modal', :as => :new_modal
+	get 'edit/todos/modal', to: 'todos#edit_modal', :as => :edit_modal
 	resources :todos
 	root 'static_pages#home'
 	get  '/about',   to: 'static_pages#about'

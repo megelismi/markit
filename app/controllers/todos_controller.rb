@@ -36,8 +36,16 @@ class TodosController < ApplicationController
   		redirect_to todos_path
 	end
 
-	def modal 
+	def new_modal 
 		@todo = Todo.new
+		respond_to do |format|
+	    	format.html
+	    	format.js
+	  	end
+	end
+
+	def edit_modal 
+		@todo = Todo.find(params[:id])
 		respond_to do |format|
 	    	format.html
 	    	format.js

@@ -10,14 +10,14 @@
 			<% @todos.each do |todo| %>
 			<tr>
 				<td><%= todo.item %></td>
-				<td><%= link_to "Edit", edit_todo_path(todo) %></td>
+				<td><%= link_to 'Edit', edit_modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', :format => :js}  %></td>
 				<td><%= link_to "Delete", todo, method: :delete %></td>
 			</tr>
 			<% end %>
 		</tbody>
 	</table>
 
-	<%= link_to 'New', modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', :format => :js}  %>
+	<%= link_to 'New', new_modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', :format => :js}  %>
 
 	<div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 </div>

@@ -1,4 +1,14 @@
 <%= form_for @todo do |f| %>
   	<%= f.text_field :item, :placeholder => "Add new item" %><br />
-  	<%= f.submit %>
+  	<%= f.submit, class: "btn btn-default btn-primary" %>
 <% end %>
+
+h2 Edit todo
+= form_for(@todo) do |f|
+  = f.text_field :item
+  = f.submit
+
+ <%= form_for(@todo) do |f| %>
+ 	<% f.text_field :item, :placeholder => "Edit item" %><br />
+ 	<%= f.submit,  class: "btn btn-default btn-primary" %>
+ <% end %>
