@@ -1,0 +1,64 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	padding: 20px;
+	padding-top: 60px;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+html {
+	display: block;
+}
+
+section {
+  overflow: auto;
+}
+
+.todos {
+	width: 50%;
+	margin-top: 60px;
+}
+
+.todos a {
+	font-size: 1.6rem;
+}
+
+h1 {
+	text-align: center;
+	font-size: 5rem;
+	color: #337ab7;
+}
+
+.table {
+	font-size: 1.6rem;
+}
+
+.center h3 {
+	margin-bottom: 30px;
+}
+.navbar {
+	margin-bottom: 50px;
+	clear: both;
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+
+.logo {
+	height: 120px;
+}
+
+.btn {
+
+}

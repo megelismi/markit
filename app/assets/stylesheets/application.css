@@ -13,9 +13,5 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
-li {
-	list-style: none;
-}
+
