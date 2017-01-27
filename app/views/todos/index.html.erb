@@ -17,9 +17,7 @@
 		</tbody>
 	</table>
 
-	<p><%= link_to "New", new_todo_path %></p>
-
-	<%= link_to 'Modal', modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', :format => :js}  %>
+	<%= link_to 'New', modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', :format => :js}  %>
 
 	<div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 </div>
